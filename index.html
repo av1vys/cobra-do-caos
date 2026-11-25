@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cobra do Caos 🐍</title>
+<style>
+body {
+  margin: 0;
+  background: #101322;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+h1 { color: #65f59a; }
+#snake {
+  font-size: 100px;
+  margin: 35px;
+  animation: move 2s infinite alternate;
+}
+@keyframes move {
+  from { transform: translateX(-30px); }
+  to { transform: translateX(30px); }
+}
+button {
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 12px;
+  background: #65f59a;
+  font-size: 17px;
+  cursor: pointer;
+}
+#message { font-size: 20px; }
+</style>
+</head>
+<body>
+<h1>🐍 COBRA DO CAOS</h1>
+<div id="snake">🐍</div>
+<p id="message">Oi, chat! Quem está aí?</p>
+<button onclick="talk()">Conversar com a cobra</button>
+<script>
+function talk() {
+  const phrases = [
+    "QUEM MEXEU NO MEU TERRITÓRIO? KKKK",
+    "Manda um oi, chat! 🐍",
+    "Hoje eu acordei venenosa!",
+    "Cadê meus presentes, humanos?",
+    "Eu sou a estrela dessa live!"
+  ];
+  document.getElementById("message").innerText =
+    phrases[Math.floor(Math.random() * phrases.length)];
+}
+</script>
+</body>
+</html>
